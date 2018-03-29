@@ -7,7 +7,7 @@
     <target name="jar">
         <jar jarfile="dest-client/xdvora2l_xhalva04.jar" basedir="build">
             <manifest>
-                <attribute name="Main-Class" value="BlockSchemes.BlockSchemes"/>
+                <attribute name="Main-Class" value="tests.HW2_tests"/>
             </manifest>
         </jar>          
     </target>
@@ -39,5 +39,5 @@
         <mkdir dir="dest-client" />
     </target>
     
-    <target name="compile" depends="clean, build,jar,doc" />    
+    <target name="compile" depends="clean, build,jar" />    
 </project>
