@@ -11,6 +11,7 @@ public class HW2_tests {
     public void setUp()
     {
         //TODO
+        System.out.println("HELLL YEAH");
     }
 
     /**
