@@ -1,6 +1,6 @@
-package blocks_schemes;
+package BlockSchemes;
 
-public class Blocks_schemes {
+public class BlockSchemes {
 
     public static void main(String[] args)
     {

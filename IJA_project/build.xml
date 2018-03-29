@@ -7,7 +7,7 @@
     <target name="jar">
         <jar jarfile="dest-client/xdvora2l_xhalva04.jar" basedir="build">
             <manifest>
-                <attribute name="Main-Class" value="blocks_schemes.Blocks_schemes"/>
+                <attribute name="Main-Class" value="BlockSchemes.BlockSchemes"/>
             </manifest>
         </jar>          
     </target>
