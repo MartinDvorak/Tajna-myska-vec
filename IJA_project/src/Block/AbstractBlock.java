@@ -13,7 +13,7 @@ public abstract class AbstractBlock implements connectable {
 
     public AbstractBlock(){
         this.state = "waiting";
-        this.ports = (Integer) null;
+        this.ports = 0;
         this.name = null;
     }
 

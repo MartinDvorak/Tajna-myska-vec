@@ -13,15 +13,15 @@ public abstract class AbstractCircle extends AbstractPlanimetry {
 
     public AbstractCircle(SortedMap<String, Double> midPoint, double radius){
         super();
-        this.midPointX = midPoint.get("PointX");
-        this.midPointY = midPoint.get("PointY");
+        this.midPointX = midPoint.get("pointX");
+        this.midPointY = midPoint.get("pointY");
         this.radius = radius;
     }
 
     public AbstractCircle(SortedMap<String, Double> circle){
         super();
-        this.midPointX = circle.get("PointX");
-        this.midPointY = circle.get("PointY");
+        this.midPointX = circle.get("pointX");
+        this.midPointY = circle.get("pointY");
         this.radius = circle.get("radius");
     }
 

@@ -12,7 +12,6 @@ public class Move extends AbstractCircle{
         super(midPoint, radius);
         this.deltaX = deltaX;
         this.deltaY = deltaY;
-
     }
 
     public Move(SortedMap<String, Double> circle, double deltaX, double deltaY){
