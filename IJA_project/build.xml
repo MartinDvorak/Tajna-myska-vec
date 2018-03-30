@@ -31,11 +31,11 @@
     <!-- clean all and create new dirs -->
 	<target name="clean">
 		<delete dir="build"/>
-        <delete dir="doc"/>
+        <!--<delete dir="doc"/>-->
         <delete dir="dest-client"/>
         
         <mkdir dir="build"/>
-        <mkdir dir="doc"/>
+        <!--<mkdir dir="doc"/>-->
         <mkdir dir="dest-client" />
     </target>
     
