@@ -1,14 +1,26 @@
 package BlockSchemes;
 
 
-import tests.HW2_tests;
+import Block.CycleCheck;
 
 public class BlockSchemes {
 
     public static void main(String[] args)
     {
-        //System.out.println("Hell");
-        HW2_tests test = new HW2_tests();
+        BlockSchemes block = new BlockSchemes();
+        block.run();
+    }
+
+    public void run(){
+        CycleCheck check = new CycleCheck();
+        if( check.CycleFind() )
+        {
+            System.out.println("Hell");
+        }
+        else{
+            System.out.println("K");
+        }
+
     }
 
 }

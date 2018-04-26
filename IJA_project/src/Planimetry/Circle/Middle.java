@@ -5,23 +5,22 @@ import java.util.TreeMap;
 
 public class Middle extends AbstractCircle {
 
-    public Middle(SortedMap<String, Double> midPoint, double radius){
+    public Middle(SortedMap<String, Double> midPoint, SortedMap<String, Double> radius){
         super(midPoint, radius);
     }
     public Middle(SortedMap<String, Double> circle){
         super(circle);
     }
 
-    public void execute(){
-        //return the midPoint
+    public SortedMap<String, Double> execute(){
+        SortedMap<String, Double> middle = new TreeMap<>();
+        middle.put("pointX", this.midPointX);
+        middle.put("pointY", this.midPointY);
+        return middle;
     }
 
-    @Override
     public SortedMap<String, Double> getValue(){
-        SortedMap<String, Double> point = new TreeMap<>();
-        point.put("pointX", this.midPointX);
-        point.put("pointY", this.midPointY);
-        return point;
+        SortedMap<String, Double> circle = getValueAbstract();
+        return circle;
     }
-
 }

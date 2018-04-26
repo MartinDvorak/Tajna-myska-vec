@@ -1,43 +1,61 @@
 <project name="xdvora2l_xhalva04" default="main" basedir=".">
-		
-	<path id="application" location="dest-client/xdvora2l_xhalva04.jar" />
     
-    
+    <path id="src.path">
+        <pathelement location="src/Block"/>
+        <pathelement location="src/BlockSchemes"/>
+        <pathelement location="src/Planimetry"/>
+        <pathelement location="src/Planimetry/Circle"/>
+        <pathelement location="src/Planimetry/Point"/>
+        <pathelement location="src/Planimetry/Line"/>
+    </path>
+
+
+    <target name="compile" depends="clean, build,jar,doc" />  
+
+    <path id="classpath.test">
+        <pathelement location="lib/junit-4.12.jar"/>
+        <pathelement location="lib/hamcrest-core-1.3.jar"/>
+        <pathelement location="build"/>
+    </path>
+
     <!-- generate .Jar -->
     <target name="jar">
         <jar jarfile="dest-client/xdvora2l_xhalva04.jar" basedir="build">
             <manifest>
-                <attribute name="Main-Class" value="tests.HW2_tests"/>
+                <attribute name="Main-Class" value="BlockSchemes.BlockSchemes"/>
             </manifest>
         </jar>          
     </target>
-    
+
     <!-- Documentation -->
     <target name="doc">
         <javadoc sourcepath="src" destdir="doc"/>
     </target>
 
-    <!-- buid project -->
-    <target name="build">
-        <exec executable="/bin/bash"> <arg value="lib/get-libs.sh"/> </exec> 
-        <javac includeantruntime="false" srcdir="src" destdir="build" />
-    </target>
-    
+    <!-- run application 
+    inspiration to build for junit find here:
+    https://github.com/junit-team/junit4/wiki/Getting-started-%E2%80%93-Ant
+    -->
     <!-- run application -->
     <target name="run">
         <java jar="dest-client/xdvora2l_xhalva04.jar" fork="true"/>
     </target>
 
+    <target name="build">
+        <exec executable="/bin/bash"> <arg value="lib/get-libs.sh"/> </exec> 
+        <javac includeantruntime="false" srcdir="src" destdir="build" />
+    </target>
+    
     <!-- clean all and create new dirs -->
 	<target name="clean">
 		<delete dir="build"/>
-        <!--<delete dir="doc"/>-->
+        <delete dir="doc"/>
         <delete dir="dest-client"/>
         
         <mkdir dir="build"/>
-        <!--<mkdir dir="doc"/>-->
+        <mkdir dir="doc"/>
         <mkdir dir="dest-client" />
     </target>
-    
-    <target name="compile" depends="clean, build,jar" />    
+
+ 
 </project>

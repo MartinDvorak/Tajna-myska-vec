@@ -17,7 +17,7 @@ public abstract class AbstractBlock implements connectable {
         this.name = null;
     }
 
-    public abstract void execute();
+    public abstract SortedMap<String, Double> execute();
 
     public String getName(){
         return this.name;

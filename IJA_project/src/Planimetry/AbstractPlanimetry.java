@@ -10,6 +10,6 @@ public abstract class AbstractPlanimetry extends AbstractBlock{
         super();
     }
 
-    public abstract void execute();
+    public abstract SortedMap<String, Double> execute();
     public abstract SortedMap<String, Double> getValue();
 }

@@ -7,6 +7,6 @@ public interface connectable {
     public SortedMap<String, Double> getValue();
     public String getState();
     public int getNumPorts();
-    public void execute();
+    public SortedMap<String, Double> execute();
     public String getName();
 }
